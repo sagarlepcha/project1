@@ -1,1 +1,22 @@
+services:
+  - type: web
+    name: project1
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    autoDeploy: true
+
+    envVars:
+      - key: API_URL
+        value: /api/v1
+
+      - key: secret
+        value: my-dog-is-nice
+
+      - key: CONNECTION_STRING
+        value: mongodb+srv://sagar2442:sagar2442@cluster0.zvkdnbx.mongodb.net/eshop-database?retryWrites=true&w=majority
+
+      - key: NODE_ENV
+        value: production
 
